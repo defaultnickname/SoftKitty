@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title="String Length Display">
+        <div class="slds-p-around_x-large">
+            <lightning-button class="slds-m-bottom_medium" icon-name={sortingIcon} alternative-text="Sort order" label={sortingLabel} onclick={toggleOrder}></lightning-button>
+
+            <div class="slds-grid slds-wrap slds-m-bottom_medium">
+                <div class="slds-col slds-size_6-of-12">
+                    <c-string-length-display title="LWC Directly" strings={sortedStrings}></c-string-length-display>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <c-string-length-display title="Backend" strings={stringEntriesSortedInTheBackend}></c-string-length-display>
+                </div>
+            </div>
+    
+            <lightning-textarea class="textAreaBody" value={text} label="Text to sort" onchange={changeText}></lightning-textarea>
+        </div>
+    </lightning-card>
+</template>
